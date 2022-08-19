@@ -25,14 +25,74 @@
         margin-bottom: 20px;
       }
       .header {
+        display: flex;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        align-items: center;
+        border-bottom: 3px solid #003055;
+      }
+      .column-header {
+        width: 25%;
+        display: flex;
+        align-items: center;
+      }
+      .column-header-main {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .button-header {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        fill: #003055;
+        color: #003055;
+        background-color: #d8de22;
+        border-radius: 0px 0px 0px 0px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
+        padding: 015px 20px 15px 20px;
+      }
+      .header-ribbon {
         background-color: #003055;
         display: flex;
       }
-      .column-header {
+      .column-ribbon-header {
         display: flex;
-        width: 50%;
         justify-content: space-between;
+        width: 50%;
         padding: 10px 0;
+      }
+      .header-links,
+      .header-links:hover {
+        color: #ffffff;
+        font-family: halyard-display, sans-serif;
+        font-size: 16px;
+        font-weight: 400 !important;
+        letter-spacing: 2px;
+        line-height: 1.2;
+        text-decoration: none !important;
+      }
+      .link-list-header {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        width: 100%;
+        padding: 0;
+      }
+      .list-header-item {
+        font-family: "halyard-display", Sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: #003055;
+      }
+      .list-header-item:hover,
+      .list-header-item:active {
+        text-decoration: underline;
       }
       .footer {
         background-color: #003055;
@@ -80,16 +140,6 @@
         line-height: 1.2em;
         letter-spacing: 1px;
       }
-      .header-links,
-      .header-links:hover {
-        color: #ffffff;
-        font-family: halyard-display, sans-serif;
-        font-size: 16px;
-        font-weight: 400 !important;
-        letter-spacing: 2px;
-        line-height: 1.2;
-        text-decoration: none !important;
-      }
       .widget-container {
         padding: 10px 0px 10px 0px;
       }
@@ -112,8 +162,8 @@
   </head>
   <body>
     <div class="container">
-      <div class="container-section header">
-        <div class="column-header">
+      <div class="container-section header-ribbon">
+        <div class="column-ribbon-header">
           <div class="widget-container">
             <a class="header-links" href="tel:2047874143">204-787-4143</a>
           </div>
@@ -127,9 +177,43 @@
           </div>
         </div>
       </div>
-      <!-- Division -->
-      <br />
-      <!-- END Division -->
+      <div class="container-section header">
+        <div class="column-header">
+          <img width="319" height="86" src="https://cancercaremdev.wpengine.com/wp-content/uploads/2019/11/cancercarelogo.png" alt="" />
+        </div>
+        <div class="column-header-main">
+          <ul class="link-list-header">
+            <li>
+              <a href="https://cancercaremdev.wpengine.com/ways-to-give/" class="list-header-item">Ways to give</a>
+            </li>
+            <li>
+              <a href="https://cancercaremdev.wpengine.com/stories/" class="list-header-item">Stories</a>
+            </li>
+            <li>
+              <a href="https://cancercaremdev.wpengine.com/fundraise/" class="list-header-item">Fundraise</a>
+            </li>
+            <li>
+              <a href="https://cancercaremdev.wpengine.com/signature-events/" class="list-header-item">Events</a>
+            </li>
+            <li>
+              <a href="https://cancercaremdev.wpengine.com/your-impact/" class="list-header-item">Your Impact</a>
+            </li>
+            <li>
+              <a href="https://www.cancercare.mb.ca/home/" class="list-header-item">Cancercare Manitoba</a>
+            </li>
+          </ul>
+        </div>
+        <div class="column-header" style="justify-content: flex-end">
+          <a
+            href="https://support.cancercarefdn.mb.ca/site/Donation2?df_id=2560&amp;mfc_pref=T&amp;2560.donation=form1&amp;action=true"
+            class="button-header"
+          >
+            Donate Now
+          </a>
+        </div>
+      </div>
+      <!-- Divider -->
+      <br /><br />
       <div class="container-section footer">
         <div class="row">
           <img
@@ -141,15 +225,17 @@
         </div>
         <div class="row">
           <ul class="link-list">
-            <li><a href="https://cancercaremdev.wpengine.com/about-ccmf/" class="elementor-item">About Us</a></li>
-            <li><a href="https://cancercaremdev.wpengine.com/our-leadership/" class="elementor-item">Leadership</a></li>
-            <li><a href="https://cancercaremdev.wpengine.com/staff-directory/" class="elementor-item">Staff Directory</a></li>
-            <li><a href="https://cancercaremdev.wpengine.com/careers/" class="elementor-item">Careers</a></li>
+            <li><a href="https://cancercaremdev.wpengine.com/about-ccmf/" class="list-header-item">About Us</a></li>
+            <li><a href="https://cancercaremdev.wpengine.com/our-leadership/" class="list-header-item">Leadership</a></li>
+            <li><a href="https://cancercaremdev.wpengine.com/staff-directory/" class="list-header-item">Staff Directory</a></li>
+            <li><a href="https://cancercaremdev.wpengine.com/careers/" class="list-header-item">Careers</a></li>
             <li>
-              <a href="https://support.cancercarefdn.mb.ca/site/SPageNavigator/eNewslettersignup.html" class="elementor-item">E-Newsletter Sign-up</a>
+              <a href="https://support.cancercarefdn.mb.ca/site/SPageNavigator/eNewslettersignup.html" class="list-header-item"
+                >E-Newsletter Sign-up</a
+              >
             </li>
-            <li><a href="https://cancercaremdev.wpengine.com/contact-us/" class="elementor-item">Contact</a></li>
-            <li><a href="https://cancercaremdev.wpengine.com/privacy-policy/" class="elementor-item">Privacy Policy</a></li>
+            <li><a href="https://cancercaremdev.wpengine.com/contact-us/" class="list-header-item">Contact</a></li>
+            <li><a href="https://cancercaremdev.wpengine.com/privacy-policy/" class="list-header-item">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="row">
