@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="https://use.typekit.net/utt8rxl.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      :root {
+        --white: #ffffff;
+        --mustard: #d8de22;
+        --light-blue: #c7eafd;
+        --blue: #003055;
+        --dark-blue: #0f243c;
+        --gray: #7a7a7a;
+        --purple: #98768e;
+        --black: #000000;
+      }
+      .header-ribbon {
+        background-color: var(--blue);
+        padding: 10px 0;
+      }
+      .header-links,
+      .header-links:hover {
+        font-family: "halyard-display", Sans-serif;
+        color: var(--white) !important;
+        font-size: 16px;
+        font-weight: 700 !important;
+        letter-spacing: 2px;
+        line-height: 1.2;
+        text-decoration: none !important;
+        line-height: 1.42857143;
+      }
+      .widget-container {
+        padding: 10px 0px 10px 0px;
+      }
+      .elementor-button {
+        font-family: "halyard-display", Sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-style: normal;
+        text-decoration: none;
+        letter-spacing: 1px;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        color: var(--blue);
+        background-color: var(--purple);
+        border-radius: 0;
+        box-shadow: 0;
+        padding: 10px 20px;
+      }
+      .elementor-button:hover {
+        color: var(--blue);
+      }
+      .navbar-toggler {
+        border: none;
+        padding: 0;
+      }
+      .navbar-toggler-icon {
+        width: 2em;
+        height: 1.5em;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,48,85, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+      }
+      .elementor-item {
+        font-size: 13px;
+        text-decoration: none;
+        font-weight: 600 !important;
+        color: var(--blue);
+        font-family: "halyard-display", Sans-serif;
+      }
+      .nav-menu-mobile .sub-arrow {
+        line-height: 1;
+        padding: 10px 0 10px 10px;
+        margin-top: -10px;
+        margin-bottom: -10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .elementor-sub-item {
+        text-decoration: none;
+        font-family: "halyard-display", Sans-serif;
+        font-weight: 500;
+        color: var(--blue);
+        font-size: 11.05px;
+        padding: 10px 20px;
+      }
+      .donate-now-container {
+        background-color: var(--mustard);
+        position: relative;
+        height: 44px;
+      }
+      .donate-now-button {
+        padding: 10px;
+        font-size: 17px;
+        color: var(--black);
+        font-weight: bold;
+        text-decoration: none;
+        background-color: var(--mustard);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row header-ribbon align-items-center">
+        <div class="col-6 d-flex justify-content-end"><a class="header-links" href="tel:2047874143">204-787-4143</a></div>
+        <div class="col-6 d-flex justify-content-start"><a class="header-links" href="tel:18774072223">1-877-407-2223</a></div>
+      </div>
+      <div class="row align-items-center sticky-top">
+        <div class="col-12 donate-now-container text-center">
+          <a
+            href="https://support.cancercarefdn.mb.ca/site/Donation2?df_id=2560&amp;mfc_pref=T&amp;2560.donation=form1&amp;action=true"
+            class="donate-now-button"
+          >
+            Donate Now
+          </a>
+        </div>
+      </div>
+      <div class="row sticky-top">
+        <div class="col-9 py-4 d-flex justify-content-center">
+          <img
+            class="img-fluid mx-auto d-blocx"
+            width="319"
+            height="86"
+            src="https://cancercaremdev.wpengine.com/wp-content/uploads/2019/11/cancercarelogo.png"
+            alt="CCMF Logo"
+          />
+        </div>
+        <div class="col-3 py-4 justify-content-center text-center align-items-center d-flex">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 px-3">
+          <div class="ccccollapse" id="navbarToggleExternalContent">
+            <ul class="list-unstyled nav-menu-mobile">
+              <li class="list-item">
+                <a href="https://cancercaremdev.wpengine.com/" class="elementor-item" tabindex="0">Home</a>
+              </li>
+              <li class="menu-item">
+                <a class="elementor-item elementor-item-active d-flex" data-bs-toggle="collapse" href="#collapseWaysToGive"
+                  >Ways to give<span class="sub-arrow">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                      fill="currentColor"
+                      class="bi bi-caret-down-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                      /></svg></span
+                ></a>
+                <div class="col collapse" id="collapseWaysToGive">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="https://support.cancercarefdn.mb.ca/site/TR?fr_id=1592&amp;pg=entry" class="elementor-sub-item" tabindex="-1"
+                        >Make an In Memory Gift</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://support.cancercarefdn.mb.ca/site/TR?fr_id=1552&amp;pg=entry" class="elementor-sub-item" tabindex="-1"
+                        >Make an In Honour Gift</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://cancercaremdev.wpengine.com/monthly-giving/" class="elementor-sub-item" tabindex="-1">Monthly Giving</a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://support.cancercarefdn.mb.ca/site/Donation2?df_id=2560&amp;mfc_pref=T&amp;2560.donation=form1&amp;action=true"
+                        class="elementor-sub-item"
+                        tabindex="-1"
+                        >Make a General Gift</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://support.cancercarefdn.mb.ca/site/Donation2?df_id=2560&amp;mfc_pref=T&amp;2560.donation=form1&amp;action=true"
+                        class="elementor-sub-item"
+                        tabindex="-1"
+                        >Make a General Gift</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://support.cancercarefdn.mb.ca/site/TR/Challenge4Life/Challenge4Life2022?pg=pfind&amp;fr_id=1743&amp;searchFirstName=%20&amp;searchLastName=%20&amp;fr_search_type=participant&amp;fr_find_search=Search&amp;submit=true"
+                        class="elementor-sub-item"
+                        tabindex="-1"
+                        >Support a Challenge for Life Participant</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://support.cancercarefdn.mb.ca/site/Donation2?df_id=3102&amp;mfc_pref=T&amp;3102.donation=form1"
+                        class="elementor-sub-item"
+                        tabindex="-1"
+                        >Make an In Gratitude Gift</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://support.cancercarefdn.mb.ca/site/TR?fr_id=1542&amp;pg=entry" class="elementor-sub-item" tabindex="-1"
+                        >Birthdays</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://support.cancercarefdn.mb.ca/site/TR?fr_id=1552&amp;pg=entry" class="elementor-sub-item" tabindex="-1"
+                        >Special Occasions</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://support.cancercarefdn.mb.ca/site/TR?fr_id=1523&amp;pg=entry" class="elementor-sub-item" tabindex="-1"
+                        >Weddings</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.cancercarefdn.mb.ca/invest-in-a-world-free-of-cancer/" class="elementor-sub-item" tabindex="-1"
+                        >Make a Bequest Gift</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://cancercaremdev.wpengine.com/donation-of-securities/" class="elementor-sub-item" tabindex="-1"
+                        >Donation of Securities or Life Insurance</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://cancercaremdev.wpengine.com/employee-giving/" class="elementor-sub-item" tabindex="-1">Workplace Giving</a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://support.cancercarefdn.mb.ca/site/TR/communityevents/General?pg=pfind&amp;fr_id=1201"
+                        class="elementor-sub-item"
+                        tabindex="-1"
+                        >Support an Event or Event Participant</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item">
+                <a class="elementor-item elementor-item-active d-flex" data-bs-toggle="collapse" href="#collapseStories"
+                  >Stories<span class="sub-arrow">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                      fill="currentColor"
+                      class="bi bi-caret-down-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                      /></svg></span
+                ></a>
+                <div class="col collapse" id="collapseStories">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="https://cancercaremdev.wpengine.com/research-profile-posts/" class="elementor-sub-item" tabindex="-1"
+                        >Research Profiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://cancercaremdev.wpengine.com/patient-stories/" class="elementor-sub-item" tabindex="-1">Patient Stories</a>
+                    </li>
+                    <li>
+                      <a href="https://cancercaremdev.wpengine.com/posts-archives/" class="elementor-sub-item" tabindex="-1">Posts Archives</a>
+                    </li>
+                    <li>
+                      <a href="https://cancercaremdev.wpengine.com/more-tomorrows-together/" class="elementor-sub-item" tabindex="-1"
+                        >More Tomorrows Together</a
+                      >
+                    </li>
+                    <li>
+                      <a href="/publications/#newsletters/" class="elementor-sub-item elementor-item-anchor" tabindex="-1">Newsletters</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item">
+                <a class="elementor-item elementor-item-active d-flex" data-bs-toggle="collapse" href="#collapseFundraise"
+                  >Fundraise<span class="sub-arrow">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                      fill="currentColor"
+                      class="bi bi-caret-down-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                      /></svg></span
+                ></a>
+                <div class="col collapse" id="collapseFundraise">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        href="https://support.cancercarefdn.mb.ca/site/SSurvey?ACTION_REQUIRED=URI_ACTION_USER_REQUESTS&amp;SURVEY_ID=3143"
+                        class="elementor-sub-item"
+                        tabindex="-1"
+                        >Register as an Individual or Community Group</a
+                      >
+                    </li>
+                    <a
+                      href="https://support.cancercarefdn.mb.ca/site/SSurvey?ACTION_REQUIRED=URI_ACTION_USER_REQUESTS&amp;SURVEY_ID=3144"
+                      class="elementor-sub-item"
+                      tabindex="-1"
+                      >Register as a Business</a
+                    >
+                    <li>
+                      <a
+                        href="https://support.cancercarefdn.mb.ca/site/SSurvey?ACTION_REQUIRED=URI_ACTION_USER_REQUESTS&amp;SURVEY_ID=3144"
+                        class="elementor-sub-item"
+                        tabindex="-1"
+                        >Register as a Business</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://cancercaremdev.wpengine.com/community-fundraisers/" class="elementor-sub-item" tabindex="-1"
+                        >Community Fundraisers</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://cancercaremdev.wpengine.com/celebrations/" class="elementor-sub-item" tabindex="-1">Celebrations</a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://support.cancercarefdn.mb.ca/site/SPageNavigator/CCMF_CommunityEvents_Register.html"
+                        class="elementor-sub-item"
+                        tabindex="-1"
+                        >Online Fundraisers</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://cancercaremdev.wpengine.com/cause-marketing/" class="elementor-sub-item" tabindex="-1">Cause Marketing</a>
+                    </li>
+                    <li>
+                      <a href="https://cancercaremdev.wpengine.com/heroes-of-hope/" class="elementor-sub-item" tabindex="-1">Heroes of Hope</a>
+                    </li>
+                    <li>
+                      <a href="https://cancercaremdev.wpengine.com/your-event-impact/" class="elementor-sub-item" tabindex="-1">Event Impact</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
