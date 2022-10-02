@@ -37,7 +37,7 @@
         font-family: "halyard-display", Sans-serif;
         color: var(--white) !important;
         font-size: 16px;
-        font-weight: 700 !important;
+        font-weight: 400 !important;
         letter-spacing: 2px;
         line-height: 1.2;
         text-decoration: none !important;
@@ -46,23 +46,24 @@
       .widget-container {
         padding: 10px 0px 10px 0px;
       }
-      .elementor-button {
+      .login-button {
         font-family: "halyard-display", Sans-serif;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 600;
         text-transform: uppercase;
         font-style: normal;
         text-decoration: none;
         letter-spacing: 1px;
         text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-        color: var(--blue);
+        color: var(--dark-blue);
         background-color: var(--purple);
         border-radius: 0;
         box-shadow: 0;
         padding: 10px 20px;
+        line-height: 1;
       }
-      .elementor-button:hover {
-        color: var(--blue);
+      .login-button:hover {
+        color: var(--dark-blue);
       }
       .navbar-toggler {
         border: none;
@@ -93,10 +94,12 @@
         position: relative;
         height: 44px;
       }
-      .donate-now-button {
+      .donate-button-mobile {
+        font-family: "halyard-display", Sans-serif;
+        text-transform: uppercase;
         padding: 10px;
         font-size: 17px;
-        color: var(--black);
+        color: var(--blue);
         font-weight: bold;
         text-decoration: none;
         background-color: var(--mustard);
@@ -107,14 +110,42 @@
         top: 50%;
         transform: translate(-50%, -50%);
       }
-      .donate-button-tablet {
-        padding: 18px 30px 14px 30px;
-        font-size: 17px;
-        color: var(--black);
-        font-weight: bold;
+      .donate-button-mobile:hover,
+      .donate-button-mobile:active {
+        color: var(--blue);
+      }
+      .donate-button {
+        font-family: "halyard-display", Sans-serif;
+        padding: 15px 15px 15px 20px;
+        font-size: 20px;
+        color: var(--blue);
+        font-weight: 600;
         text-decoration: none;
         background-color: var(--mustard);
         text-transform: uppercase;
+        line-height: 1;
+        text-align: center;
+      }
+      .donate-button:hover,
+      .donate-button:active {
+        color: var(--blue);
+      }
+      .chevron-container {
+        display: none;
+        margin-bottom: 3px;
+        margin-left: 2px;
+      }
+      .chevron-line {
+        width: 9px;
+        height: 3px;
+        background-color: var(--blue);
+      }
+      .chevron-line-top {
+        transform: rotate(-135deg);
+      }
+      .chevron-line-bottom {
+        margin-top: 2px;
+        transform: rotate(135deg);
       }
       .menu-item {
         padding: 5px 0;
@@ -187,12 +218,8 @@
         padding-top: 40px;
       }
       .footer-ribbon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color: #0f243c;
         padding: 30px;
-        align-items: center;
       }
       .footer-ribbon-text {
         font-size: 18px;
@@ -217,44 +244,181 @@
       .padding-40 {
         padding-bottom: 40px;
       }
+      .link-list-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      .list-header-item {
+        font-family: "halyard-display", Sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: #003055;
+      }
+      .list-header-item:hover,
+      .list-header-item:active {
+        color: var(--blue);
+        text-decoration: underline;
+      }
+      .elementor-button-content-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      .link-list {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        flex-wrap: wrap;
+      }
+      .link-list > li > a {
+        padding: 13px 20px;
+        color: #c7eafd;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+      }
+      .link-list > li > a:hover {
+        color: #c7eafd82;
+        fill: #c7eafd;
+        transition: 0.25s ease-in;
+      }
+      /* Media Queries */
+      /* Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) {
+      }
+
+      /* Medium devices (tablets, 768px and up) */
+      @media (min-width: 768px) {
+      }
+
+      /* Large devices (desktops, 992px and up) */
+      @media (min-width: 992px) {
+        .header-ribbon {
+          padding: 0 5%;
+          height: 60px;
+        }
+        .padding-lg-top {
+          padding: 20px 5%;
+        }
+        .margin-right-list-item {
+          margin: 0 5px;
+          padding: 0 5px;
+        }
+        .footer-ribbon {
+          padding: 0 5%;
+          height: 55px;
+        }
+        .custom-navbar {
+          position: relative;
+        }
+      }
+
+      /* X-Large devices (large desktops, 1200px and up) */
+      @media (min-width: 1200px) {
+      }
+
+      /* XX-Large devices (larger desktops, 1400px and up) */
+      @media (min-width: 1400px) {
+      }
     </style>
   </head>
   <body>
     <div class="container-fluid">
+      <!-- Ribbon -->
       <div class="row header-ribbon align-items-center">
-        <div class="col-6 col-md-auto d-flex justify-content-end justify-content-md-start px-md-4">
-          <a class="header-links" href="tel:2047874143">204-787-4143</a>
+        <div class="col-6 col-md-auto col-lg-2 d-flex justify-content-end justify-content-md-start px-md-4 p-lg-0">
+          <div>
+            <a class="header-links" href="tel:2047874143">204-787-4143</a>
+          </div>
         </div>
-        <div class="col-6 d-flex justify-content-start"><a class="header-links" href="tel:18774072223">1-877-407-2223</a></div>
+        <div class="col-6 col-md-auto col-lg-8 d-flex justify-content-start p-lg-0">
+          <a class="header-links" href="tel:18774072223">1-877-407-2223</a>
+        </div>
+        <div class="col-lg-2 justify-content-center d-none d-lg-flex justify-content-lg-end p-lg-0">
+          <a
+            href="https://support.cancercarefdn.mb.ca/site/SPageNavigator/mhcf_loginLanding.html"
+            id="login-btn-ribbon"
+            class="login-button"
+            role="button"
+          >
+            Login
+            <span id="chevron-container-login" class="chevron-container">
+              <div class="chevron-line chevron-line-top"></div>
+              <div class="chevron-line chevron-line-bottom"></div>
+            </span>
+          </a>
+        </div>
       </div>
       <!-- Navbar -->
-      <div class="row sticky-top bg-white">
+      <div class="row sticky-top bg-white padding-lg-top custom-navbar">
         <!-- Full width donate button -->
         <div class="col-12 donate-now-container text-center d-md-none">
           <a
             href="https://support.cancercarefdn.mb.ca/site/Donation2?df_id=2560&amp;mfc_pref=T&amp;2560.donation=form1&amp;action=true"
-            class="donate-now-button"
+            class="donate-button-mobile"
           >
             Donate Now
           </a>
         </div>
-        <div class="col-10 col-md-6 col-sm-6 py-4 d-flex justify-content-center">
+        <div class="col-10 col-sm-6 col-md-6 col-lg-3 py-4 p-lg-0 d-flex justify-content-center d-lg-block">
           <img
-            class="img-fluid mx-auto d-blocx"
-            width="319"
-            height="86"
-            src="https://cancercaremdev.wpengine.com/wp-content/uploads/2019/11/cancercarelogo.png"
+            class="img-fluid"
+            width="1492"
+            height="408"
+            src="https://cancercaremdev.wpengine.com/wp-content/uploads/2020/01/CCMB-found-logo.jpg"
             alt="CCMF Logo"
           />
         </div>
-        <div class="col-md-4 text-center d-none d-md-flex justify-content-center align-items-center">
+        <div class="col-lg-7 d-none d-lg-flex d-flex align-items-center p-lg-0">
+          <ul class="link-list-header">
+            <li>
+              <a href="https://cancercaremdev.wpengine.com/ways-to-give/" class="list-header-item margin-right-list-item">Ways to give</a>
+            </li>
+            <li>
+              <a href="https://cancercaremdev.wpengine.com/stories/" class="list-header-item margin-right-list-item">Stories</a>
+            </li>
+            <li>
+              <a href="https://cancercaremdev.wpengine.com/fundraise/" class="list-header-item margin-right-list-item">Fundraise</a>
+            </li>
+            <li>
+              <a href="https://cancercaremdev.wpengine.com/signature-events/" class="list-header-item margin-right-list-item">Events</a>
+            </li>
+            <li>
+              <a href="https://cancercaremdev.wpengine.com/your-impact/" class="list-header-item margin-right-list-item">Your Impact</a>
+            </li>
+            <li>
+              <a href="https://www.cancercare.mb.ca/home/" class="list-header-item margin-right-list-item">Cancercare Manitoba</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-2 text-center d-none d-md-flex justify-content-center align-items-center pe-lg-0 justify-content-lg-start">
           <a
             href="https://support.cancercarefdn.mb.ca/site/Donation2?df_id=2560&amp;mfc_pref=T&amp;2560.donation=form1&amp;action=true"
-            class="donate-button-tablet"
+            id="donate-button-desktop"
+            class="donate-button"
           >
-            Donate Now
+            Donate now
+            <span id="chevron-container-desktop" class="chevron-container">
+              <div class="chevron-line chevron-line-top"></div>
+              <div class="chevron-line chevron-line-bottom"></div>
+            </span>
           </a>
         </div>
+        <!-- Mobile Menú -->
         <div class="col-2 col-md-2 py-4 justify-content-center text-center align-items-center d-flex d-lg-none">
           <button
             class="navbar-toggler d-flex flex-column justify-content-around collapsed"
@@ -340,7 +504,7 @@
         </div>
       </div>
       <!-- Content -->
-      <div class="row">
+      <div class="row bg-black">
         <div class="col">
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
@@ -418,7 +582,7 @@
       </div>
       <!-- Footer -->
       <div class="row footer">
-        <div class="col-12 text-center padding-40">
+        <div class="col-12 text-center padding-40 px-4 px-md-0">
           <img
             width="396"
             height="109"
@@ -427,7 +591,7 @@
             alt="Cancer Care Logo"
           />
         </div>
-        <div class="col d-none d-lg-block">
+        <div class="col-auto d-none d-lg-block">
           <ul class="link-list">
             <li><a href="https://cancercaremdev.wpengine.com/about-ccmf/" class="list-header-item">About Us</a></li>
             <li><a href="https://cancercaremdev.wpengine.com/our-leadership/" class="list-header-item">Leadership</a></li>
@@ -442,13 +606,32 @@
             <li><a href="https://cancercaremdev.wpengine.com/privacy-policy/" class="list-header-item">Privacy Policy</a></li>
           </ul>
         </div>
-        <div class="col-12 text-center padding-40">
+        <div class="col-12 text-center padding-40 px-4 px-md-0">
           <p class="bottom-line-text">OUR CRA CHARITABLE REGISTRATION NUMBER IS 88688 6746 RR0001</p>
         </div>
-        <div class="col-12 footer-ribbon">
+        <div class="col-12 footer-ribbon d-flex justify-content-center align-items-center justify-content-lg-start">
           <p class="footer-ribbon-text">© 2022 CancerCare Manitoba Foundation</p>
         </div>
       </div>
     </div>
+    <script>
+      // On hover effect chevron donate button for desktop
+      var btnDonate = document.getElementById("donate-button-desktop");
+      var chvContainer = document.getElementById("chevron-container-desktop");
+      btnDonate.onmouseover = function () {
+        chvContainer.style.display = "inline-block";
+      };
+      btnDonate.onmouseout = function () {
+        chvContainer.style.display = "none";
+      };
+      var btnLogin = document.getElementById("login-btn-ribbon");
+      var chvLoginRibbon = document.getElementById("chevron-container-login");
+      btnLogin.onmouseover = function () {
+        chvLoginRibbon.style.display = "inline-block";
+      };
+      btnLogin.onmouseout = function () {
+        chvLoginRibbon.style.display = "none";
+      };
+    </script>
   </body>
 </html>
