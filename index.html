@@ -304,6 +304,14 @@
       /* Medium devices (tablets, 768px and up) */
       @media (min-width: 768px) {
       }
+      @media (max-width: 768px) {
+        #ccmf-logo-container {
+          padding-left: 5%;
+        }
+        #mobile-menu-toggler {
+          padding-right: 5%;
+        }
+      }
 
       /* Large devices (desktops, 992px and up) */
       @media (min-width: 992px) {
@@ -329,6 +337,14 @@
 
       /* X-Large devices (large desktops, 1200px and up) */
       @media (min-width: 1200px) {
+        .custom-content-area {
+          width: 1200px !important;
+        }
+      }
+      @media (max-width: 1200px) {
+        .custom-content-area {
+          padding: 0 5%;
+        }
       }
 
       /* XX-Large devices (larger desktops, 1400px and up) */
@@ -374,7 +390,8 @@
             Donate Now
           </a>
         </div>
-        <div class="col-10 col-sm-6 col-md-6 col-lg-3 py-4 px-md-4 p-lg-0 d-flex justify-content-center d-lg-block">
+        <!-- CCMF Logo -->
+        <div id="ccmf-logo-container" class="col-9 col-sm-6 col-md-6 col-lg-3 py-4 px-md-4 p-lg-0 d-flex justify-content-center d-lg-block">
           <img
             class="img-fluid"
             width="1492"
@@ -419,7 +436,7 @@
           </a>
         </div>
         <!-- Mobile Menu Toggler -->
-        <div class="col-2 col-md-2 py-4 justify-content-center text-center align-items-center d-flex d-lg-none">
+        <div id="mobile-menu-toggler" class="col-3 col-md-2 py-4 justify-content-center text-center align-items-center d-flex d-lg-none">
           <button
             class="navbar-toggler d-flex flex-column justify-content-around collapsed"
             type="button"
@@ -507,8 +524,8 @@
         </div>
       </div>
       <!-- Content -->
-      <div class="row">
-        <div class="col">
+      <div class="row justify-content-lg-center">
+        <div class="col-12 custom-content-area">
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
             Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
