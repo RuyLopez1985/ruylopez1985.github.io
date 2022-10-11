@@ -315,10 +315,19 @@
       #mobile-menu-toggler {
         display: flex;
       }
+      .bg-bar-multicolor {
+        background-image: url(http://www.cancercarefdn.mb.ca/wp-content/uploads/2019/11/colour_bar.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 6px;
+      }
       /* Media Queries */
       /* Mobile design starts at 481px */
       /* Tablets */
       @media (min-width: 768px) and (max-width: 1024px) {
+        .bg-bar-multicolor {
+          min-height: 10px;
+        }
         #container-inline-donate-button {
           justify-content: flex-end;
         }
@@ -341,6 +350,9 @@
       }
       /* Desktops */
       @media (min-width: 1025px) {
+        .bg-bar-multicolor {
+          min-height: 20px;
+        }
         #container-inline-donate-button {
           width: 15%;
         }
@@ -659,6 +671,8 @@
           </div>
         </div>
       </div>
+      <!-- Multicolor line -->
+      <div class="row bg-bar-multicolor"></div>
       <!-- Footer -->
       <div class="row footer">
         <div class="footer-sub-container">
