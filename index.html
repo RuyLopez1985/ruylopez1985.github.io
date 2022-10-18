@@ -218,6 +218,7 @@
       .footer-ribbon {
         background-color: #0f243c;
         padding: 30px;
+        text-align: center;
       }
       .footer-ribbon-text {
         font-size: 18px;
@@ -294,7 +295,7 @@
         transition: 0.25s ease-in;
       }
       .footer-sub-container {
-        padding: 40px 0;
+        padding: 50px 0;
       }
       .custom-padding-l-r {
         padding-left: 5%;
@@ -350,6 +351,12 @@
       }
       /* Desktops */
       @media (min-width: 1025px) {
+        .logo-footer {
+          width: 76%;
+        }
+        .footer-ribbon {
+          text-align: left;
+        }
         .bg-bar-multicolor {
           min-height: 20px;
         }
@@ -678,7 +685,7 @@
         <div class="footer-sub-container">
           <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 padding-40 px-4 px-md-0">
             <img
-              class="img-fluid"
+              class="img-fluid logo-footer d-lg-block mx-auto"
               src="https://cancercaremdev.wpengine.com/wp-content/uploads/2019/11/CCMB-found-logo-reverse.svg"
               alt="Cancer Care Logo"
             />
@@ -704,7 +711,7 @@
           </div>
         </div>
         <!-- Ribbon text -->
-        <div class="col-12 footer-ribbon text-center">
+        <div class="col-12 footer-ribbon">
           <p class="footer-ribbon-text">© 2022 CancerCare Manitoba Foundation</p>
         </div>
       </div>
