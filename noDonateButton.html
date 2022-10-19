@@ -54,11 +54,9 @@
         font-style: normal;
         text-decoration: none;
         letter-spacing: 1px;
-        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
         color: var(--blue);
         background-color: var(--purple);
         border-radius: 0;
-        box-shadow: 0;
         padding: 10px 20px;
         line-height: 1;
       }
@@ -75,10 +73,11 @@
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,48,85, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
       }
       .elementor-item {
-        font-size: 20px;
+        font-size: 24px;
         text-decoration: none;
         font-weight: 600 !important;
-        color: var(--blue) !important;
+        color: #113052 !important;
+        line-height: 40px;
         font-family: "halyard-display", Sans-serif;
       }
       .elementor-sub-item {
@@ -88,6 +87,47 @@
         color: var(--blue);
         font-size: 11.05px;
         padding: 10px 20px;
+      }
+      .donate-now-container {
+        background-color: var(--mustard);
+        position: relative;
+        height: 44px;
+      }
+      .donate-button-mobile {
+        font-family: "halyard-display", Sans-serif;
+        text-transform: uppercase;
+        padding: 10px;
+        font-size: 16px;
+        color: var(--blue);
+        font-weight: 600;
+        text-decoration: none;
+        background-color: var(--mustard);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .donate-button-mobile:hover,
+      .donate-button-mobile:active {
+        color: var(--blue);
+      }
+      .donate-button {
+        font-family: "halyard-display", Sans-serif;
+        padding: 15px 15px 15px 20px;
+        font-size: 20px;
+        color: var(--blue);
+        font-weight: 600;
+        text-decoration: none;
+        background-color: var(--mustard);
+        text-transform: uppercase;
+        line-height: 1;
+        text-align: center;
+      }
+      .donate-button:hover,
+      .donate-button:active {
+        color: var(--blue);
       }
       .chevron-container {
         display: none;
@@ -107,7 +147,7 @@
         transform: rotate(135deg);
       }
       .menu-item {
-        padding: 5px 0;
+        padding: 15px 40px;
       }
       /* Custom hamburguer menu */
       .navbar-toggler {
@@ -132,7 +172,7 @@
         display: block;
         position: absolute;
         height: 4px;
-        width: 100%;
+        width: 80%;
         background: var(--blue);
         border-radius: 5px;
         opacity: 1;
@@ -174,11 +214,11 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        padding-top: 40px;
       }
       .footer-ribbon {
         background-color: #0f243c;
         padding: 30px;
+        text-align: center;
       }
       .footer-ribbon-text {
         font-size: 18px;
@@ -197,7 +237,6 @@
         text-transform: uppercase;
         line-height: 1.2em;
         letter-spacing: 1px;
-        padding: 0 23px;
         margin: 0;
       }
       .padding-40 {
@@ -237,7 +276,7 @@
       }
       .link-list {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         list-style: none;
         flex-wrap: wrap;
       }
@@ -255,17 +294,100 @@
         fill: #c7eafd;
         transition: 0.25s ease-in;
       }
+      .footer-sub-container {
+        padding: 50px 0;
+      }
+      .custom-padding-l-r {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      .footer-links {
+        display: none;
+      }
+      .container-login-button {
+        display: none;
+      }
+      .container-main-menu-links {
+        display: none;
+      }
+      .container-header-elements {
+        padding: 25px 5%;
+      }
+      #mobile-menu-toggler {
+        display: flex;
+      }
+      .bg-bar-multicolor {
+        background-image: url(http://www.cancercarefdn.mb.ca/wp-content/uploads/2019/11/colour_bar.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 6px;
+      }
       /* Media Queries */
-      /* Small devices (landscape phones, 576px and up) */
-      @media (min-width: 576px) {
+      /* Mobile design starts at 481px */
+      /* Tablets */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .bg-bar-multicolor {
+          min-height: 10px;
+        }
+        #container-inline-donate-button {
+          justify-content: flex-end;
+        }
+        .padding-40 {
+          padding-bottom: 40px;
+        }
+        .footer-ribbon {
+          padding: 30px 5%;
+          text-align: center;
+        }
+        .footer-sub-container {
+          padding: 50px 0;
+        }
+        .header-ribbon {
+          padding: 0 5%;
+          height: 55px;
+        }
       }
-
-      /* Medium devices (tablets, 768px and up) */
-      @media (min-width: 768px) {
+      @media (min-width: 992px) and (max-width: 1024px) {
       }
-
-      /* Large devices (desktops, 992px and up) */
-      @media (min-width: 992px) {
+      /* Desktops */
+      @media (min-width: 1025px) {
+        .row-mobile-menu {
+          display: none;
+        }
+        .logo-footer {
+          width: 76%;
+        }
+        .footer-ribbon {
+          text-align: left;
+        }
+        .bg-bar-multicolor {
+          min-height: 20px;
+        }
+        #container-inline-donate-button {
+          width: 15%;
+        }
+        #ccmf-logo-container {
+          width: 26%;
+        }
+        .container-header-elements {
+          padding: 0;
+        }
+        #mobile-menu-toggler {
+          display: none;
+        }
+        .container-main-menu-links {
+          display: flex;
+          width: 60%;
+        }
+        .container-login-button {
+          display: flex;
+        }
+        .footer-links {
+          display: block;
+        }
+        .footer-ribbon {
+          padding: 30px 5%;
+        }
         .header-ribbon {
           padding: 0 5%;
           height: 60px;
@@ -277,21 +399,24 @@
           margin: 0 5px;
           padding: 0 5px;
         }
-        .footer-ribbon {
-          padding: 0 5%;
-          height: 55px;
-        }
         .custom-navbar {
           position: relative;
         }
+        .padding-40 {
+          padding-bottom: 0;
+        }
       }
-
       /* X-Large devices (large desktops, 1200px and up) */
       @media (min-width: 1200px) {
+        .custom-content-area {
+          width: 1200px !important;
+          padding: 0 5%;
+        }
       }
-
-      /* XX-Large devices (larger desktops, 1400px and up) */
-      @media (min-width: 1400px) {
+      @media (max-width: 1200px) {
+        .custom-content-area {
+          padding: 0 5%;
+        }
       }
     </style>
   </head>
@@ -299,15 +424,15 @@
     <div class="container-fluid">
       <!-- Ribbon -->
       <div class="row header-ribbon align-items-center">
-        <div class="col-6 col-md-auto col-lg-2 d-flex justify-content-start justify-content-md-start px-4 p-lg-0">
+        <div class="col-6 col-md-auto col-lg-auto col-xl-2 d-flex justify-content-end justify-content-md-start ps-0">
           <div>
             <a class="header-links" href="tel:2047874143">204-787-4143</a>
           </div>
         </div>
-        <div class="col-6 col-md-auto col-lg-8 d-flex justify-content-center justify-content-lg-start p-lg-0">
+        <div class="col-6 col-md-auto col-lg-auto d-flex justify-content-start">
           <a class="header-links" href="tel:18774072223">1-877-407-2223</a>
         </div>
-        <div class="col-lg-2 justify-content-center d-none d-lg-flex justify-content-lg-end p-lg-0">
+        <div class="col-lg-2 justify-content-lg-end container-login-button flex-lg-fill p-0">
           <a
             href="https://support.cancercarefdn.mb.ca/site/SPageNavigator/mhcf_loginLanding.html"
             id="login-btn-ribbon"
@@ -324,100 +449,107 @@
       </div>
       <!-- Navbar -->
       <div class="row sticky-top bg-white padding-lg-top custom-navbar">
-        <div class="col-8 col-md-8 col-lg-3 p-4 p-lg-0 d-flex justify-content-center d-lg-block">
-          <img
-            class="img-fluid"
-            width="1492"
-            height="408"
-            src="https://cancercaremdev.wpengine.com/wp-content/uploads/2020/01/CCMB-found-logo.jpg"
-            alt="CCMF Logo"
-          />
+        <div class="container-header-elements d-flex justify-content-between">
+          <!-- CCMF Logo -->
+          <div id="ccmf-logo-container" class="col-8 col-sm-8 col-md-6 d-flex justify-content-center d-lg-block">
+            <a href="https://cancercarefdn.mb.ca/">
+              <img
+                class="img-fluid"
+                width="1492"
+                height="408"
+                src="https://cancercaremdev.wpengine.com/wp-content/uploads/2020/01/CCMB-found-logo.jpg"
+                alt="CCMF Logo"
+              />
+            </a>
+          </div>
+          <!-- Menu -->
+          <div class="col-lg-7 align-items-center p-lg-0 container-main-menu-links">
+            <ul class="link-list-header">
+              <li>
+                <a href="https://cancercarefdn.mb.ca/ways-to-give/" class="list-header-item margin-right-list-item">Ways to give</a>
+              </li>
+              <li>
+                <a href="https://cancercarefdn.mb.ca/stories/" class="list-header-item margin-right-list-item">Stories</a>
+              </li>
+              <li>
+                <a href="https://cancercarefdn.mb.ca/fundraise/" class="list-header-item margin-right-list-item">Fundraise</a>
+              </li>
+              <li>
+                <a href="https://cancercarefdn.mb.ca/signature-events/" class="list-header-item margin-right-list-item">Events</a>
+              </li>
+              <li>
+                <a href="https://cancercarefdn.mb.ca/your-impact/" class="list-header-item margin-right-list-item">Your Impact</a>
+              </li>
+              <li>
+                <a href="https://www.cancercarefdn.mb.ca/home/" class="list-header-item margin-right-list-item">Cancercare Manitoba</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Mobile Menu Toggler -->
+          <div id="mobile-menu-toggler" class="col-3 col-sm-4 col-md-2 justify-content-end align-items-center">
+            <button
+              class="navbar-toggler d-flex flex-column justify-content-around collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent"
+              aria-controls="navbarToggleExternalContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="toggler-icon top-bar"></span>
+              <span class="toggler-icon middle-bar"></span>
+              <span class="toggler-icon bottom-bar"></span>
+            </button>
+          </div>
         </div>
-        <div class="col-lg-7 d-none d-lg-flex d-flex align-items-center p-lg-0">
-          <ul class="link-list-header">
-            <li>
-              <a href="https://cancercaremdev.wpengine.com/ways-to-give/" class="list-header-item margin-right-list-item">Ways to give</a>
-            </li>
-            <li>
-              <a href="https://cancercaremdev.wpengine.com/stories/" class="list-header-item margin-right-list-item">Stories</a>
-            </li>
-            <li>
-              <a href="https://cancercaremdev.wpengine.com/fundraise/" class="list-header-item margin-right-list-item">Fundraise</a>
-            </li>
-            <li>
-              <a href="https://cancercaremdev.wpengine.com/signature-events/" class="list-header-item margin-right-list-item">Events</a>
-            </li>
-            <li>
-              <a href="https://cancercaremdev.wpengine.com/your-impact/" class="list-header-item margin-right-list-item">Your Impact</a>
-            </li>
-            <li>
-              <a href="https://www.cancercare.mb.ca/home/" class="list-header-item margin-right-list-item">Cancercare Manitoba</a>
-            </li>
-          </ul>
-        </div>
-        <!-- Mobile Menú -->
-        <div class="col-4 col-md-4 py-4 justify-content-center text-center align-items-center d-flex d-lg-none">
-          <button
-            class="navbar-toggler d-flex flex-column justify-content-around collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarToggleExternalContent"
-            aria-controls="navbarToggleExternalContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="toggler-icon top-bar"></span>
-            <span class="toggler-icon middle-bar"></span>
-            <span class="toggler-icon bottom-bar"></span>
-          </button>
-        </div>
-      </div>
-      <div class="row d-lg-none">
         <!-- Mobile Menu -->
-        <div class="col-12">
+        <div class="col-12 row-mobile-menu navbar-nav-scroll">
           <div class="collapse" id="navbarToggleExternalContent">
             <ul class="list-unstyled">
               <li class="menu-item">
-                <a href="https://cancercaremdev.wpengine.com/" class="elementor-item" tabindex="0">Home</a>
+                <a href="https://support.cancercarefdn.mb.ca/site/SPageNavigator/mhcf_loginLanding.html" class="elementor-item" tabindex="0">Login</a>
               </li>
               <li class="menu-item">
-                <a href="https://cancercaremdev.wpengine.com/ways-to-give/" class="elementor-item" tabindex="0">Ways to give</a>
+                <a href="https://cancercarefdn.mb.ca/" class="elementor-item" tabindex="0">Home</a>
               </li>
               <li class="menu-item">
-                <a href="https://cancercaremdev.wpengine.com/stories/" class="elementor-item" tabindex="0">Stories</a>
+                <a href="https://cancercarefdn.mb.ca/ways-to-give/" class="elementor-item" tabindex="0">Ways to give</a>
               </li>
               <li class="menu-item">
-                <a href="https://cancercaremdev.wpengine.com/fundraise/" class="elementor-item" tabindex="0">Fundraise</a>
+                <a href="https://cancercarefdn.mb.ca/stories/" class="elementor-item" tabindex="0">Stories</a>
               </li>
               <li class="menu-item">
-                <a href="https://cancercaremdev.wpengine.com/signature-events/" class="elementor-item" tabindex="0">Events</a>
+                <a href="https://cancercarefdn.mb.ca/fundraise/" class="elementor-item" tabindex="0">Fundraise</a>
               </li>
               <li class="menu-item">
-                <a href="https://cancercaremdev.wpengine.com/your-impact/" class="elementor-item" tabindex="0">Your Impact</a>
+                <a href="https://cancercarefdn.mb.ca/signature-events/" class="elementor-item" tabindex="0">Events</a>
               </li>
               <li class="menu-item">
-                <a href="https://cancercaremdev.wpengine.com/about-ccmf/" class="elementor-item" tabindex="0">About Us</a>
+                <a href="https://cancercarefdn.mb.ca/your-impact/" class="elementor-item" tabindex="0">Your Impact</a>
               </li>
               <li class="menu-item">
-                <a href="https://cancercaremdev.wpengine.com/news/" class="elementor-item" tabindex="0">News</a>
+                <a href="https://cancercarefdn.mb.ca/about-ccmf/" class="elementor-item" tabindex="0">About Us</a>
+              </li>
+              <li class="menu-item">
+                <a href="https://cancercarefdn.mb.ca/news/" class="elementor-item" tabindex="0">News</a>
               </li>
               <li class="menu-item">
                 <a href="#" class="elementor-item elementor-item-anchor" tabindex="0">Donor Bill of Rights</a>
               </li>
               <li class="menu-item">
-                <a href="https://cancercaremdev.wpengine.com/current-grants/" class="elementor-item" tabindex="0">Grants</a>
+                <a href="https://cancercarefdn.mb.ca/current-grants/" class="elementor-item" tabindex="0">Grants</a>
               </li>
               <li class="menu-item">
-                <a href="https://cancercaremdev.wpengine.com/audited-statements/" class="elementor-item" tabindex="0">Audited Statements</a>
+                <a href="https://cancercarefdn.mb.ca/audited-statements/" class="elementor-item" tabindex="0">Audited Statements</a>
               </li>
               <li class="menu-item">
-                <a href="https://cancercaremdev.wpengine.com/our-leadership/" class="elementor-item" tabindex="0">Leadership</a>
+                <a href="https://cancercarefdn.mb.ca/our-leadership/" class="elementor-item" tabindex="0">Leadership</a>
               </li>
               <li class="menu-item">
-                <a href="https://cancercaremdev.wpengine.com/staff-directory/" class="elementor-item" tabindex="0">Staff Directory</a>
+                <a href="https://cancercarefdn.mb.ca/staff-directory/" class="elementor-item" tabindex="0">Staff Directory</a>
               </li>
               <li class="menu-item">
-                <a href="https://cancercaremdev.wpengine.com/careers/" class="elementor-item" tabindex="0">Careers</a>
+                <a href="https://cancercarefdn.mb.ca/careers/" class="elementor-item" tabindex="0">Careers</a>
               </li>
               <li class="menu-item">
                 <a href="https://secure3.convio.net/ccmf/site/SPageNavigator/eNewslettersignup.html" class="elementor-item" tabindex="0"
@@ -434,125 +566,141 @@
                 <a href="https://www.cancercare.mb.ca/home/" class="elementor-item" tabindex="0">Cancercare Manitoba</a>
               </li>
               <li class="menu-item">
-                <a href="https://support.cancercarefdn.mb.ca/site/SPageNavigator/mhcf_loginLanding.html" class="elementor-item" tabindex="0">Login</a>
+                <a href="https://cancercaremdev.wpengine.com/frequently-asked-questions/" class="elementor-item" tabindex="0"
+                  >Frequently Asked Questions</a
+                >
               </li>
             </ul>
           </div>
         </div>
       </div>
       <!-- Content -->
-      <div class="row">
-        <div class="col">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
-            Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
-          </p>
+      <div class="row justify-content-lg-center">
+        <div class="col-12 p-0 d-flex justify-content-center">
+          <div class="custom-content-area">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia, reprehenderit animi labore laudantium non voluptas et vero.
+              Nulla officia provident veniam. Enim vel nisi, debitis hic ducimus amet! Dicta?
+            </p>
+          </div>
         </div>
       </div>
+      <!-- Multicolor line -->
+      <div class="row bg-bar-multicolor"></div>
       <!-- Footer -->
       <div class="row footer">
-        <div class="col-12 text-center padding-40 px-4 px-md-0">
-          <img
-            width="396"
-            height="109"
-            class="img-fluid"
-            src="https://cancercaremdev.wpengine.com/wp-content/uploads/2019/11/CCMB-found-logo-reverse.svg"
-            alt="Cancer Care Logo"
-          />
+        <div class="footer-sub-container">
+          <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 padding-40 px-4 px-md-0">
+            <img
+              class="img-fluid logo-footer d-lg-block mx-auto"
+              src="https://cancercaremdev.wpengine.com/wp-content/uploads/2019/11/CCMB-found-logo-reverse.svg"
+              alt="Cancer Care Logo"
+            />
+          </div>
+          <!-- Footer links -->
+          <div class="col-12 footer-links">
+            <ul class="link-list">
+              <li><a href="https://cancercarefdn.mb.ca/about-ccmf/" class="list-header-item">About Us</a></li>
+              <li><a href="https://cancercarefdn.mb.ca/our-leadership/" class="list-header-item">Leadership</a></li>
+              <li><a href="https://cancercarefdn.mb.ca/staff-directory/" class="list-header-item">Staff Directory</a></li>
+              <li><a href="https://cancercarefdn.mb.ca/careers/" class="list-header-item">Careers</a></li>
+              <li>
+                <a href="https://support.cancercarefdn.mb.ca/site/SPageNavigator/eNewslettersignup.html" class="list-header-item"
+                  >E-Newsletter Sign-up</a
+                >
+              </li>
+              <li><a href="https://cancercarefdn.mb.ca/contact-us/" class="list-header-item">Contact</a></li>
+              <li><a href="https://cancercarefdn.mb.ca/privacy-policy/" class="list-header-item">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-12 text-center custom-padding-l-r">
+            <p class="bottom-line-text">OUR CRA CHARITABLE REGISTRATION NUMBER IS 88688 6746 RR0001</p>
+          </div>
         </div>
-        <div class="col-auto d-none d-lg-block">
-          <ul class="link-list">
-            <li><a href="https://cancercaremdev.wpengine.com/about-ccmf/" class="list-header-item">About Us</a></li>
-            <li><a href="https://cancercaremdev.wpengine.com/our-leadership/" class="list-header-item">Leadership</a></li>
-            <li><a href="https://cancercaremdev.wpengine.com/staff-directory/" class="list-header-item">Staff Directory</a></li>
-            <li><a href="https://cancercaremdev.wpengine.com/careers/" class="list-header-item">Careers</a></li>
-            <li>
-              <a href="https://support.cancercarefdn.mb.ca/site/SPageNavigator/eNewslettersignup.html" class="list-header-item"
-                >E-Newsletter Sign-up</a
-              >
-            </li>
-            <li><a href="https://cancercaremdev.wpengine.com/contact-us/" class="list-header-item">Contact</a></li>
-            <li><a href="https://cancercaremdev.wpengine.com/privacy-policy/" class="list-header-item">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <div class="col-12 text-center padding-40 px-4 px-md-0">
-          <p class="bottom-line-text">OUR CRA CHARITABLE REGISTRATION NUMBER IS 88688 6746 RR0001</p>
-        </div>
-        <div class="col-12 footer-ribbon d-flex justify-content-center align-items-center justify-content-lg-start">
+        <!-- Ribbon text -->
+        <div class="col-12 footer-ribbon">
           <p class="footer-ribbon-text">© 2022 CancerCare Manitoba Foundation</p>
         </div>
       </div>
     </div>
     <script>
-      // On hover effect show chevron on login button
+      // On hover effect chevron donate button for desktop
+      var btnDonate = document.getElementById("donate-button-desktop");
+      var chvContainer = document.getElementById("chevron-container-desktop");
+      btnDonate.onmouseover = function () {
+        chvContainer.style.display = "inline-block";
+      };
+      btnDonate.onmouseout = function () {
+        chvContainer.style.display = "none";
+      };
       var btnLogin = document.getElementById("login-btn-ribbon");
       var chvLoginRibbon = document.getElementById("chevron-container-login");
       btnLogin.onmouseover = function () {
